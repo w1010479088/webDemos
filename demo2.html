@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小测试</title>
+</head>
+<script>
+    function bigger(id, size) {
+        setSize(id, size)
+    }
+
+    function smaller(id, size) {
+        setSize(id, size)
+    }
+
+    function setSize(id, size) {
+        setWidth(id, size)
+        setHeight(id, size)
+    }
+
+    function setWidth(id, width) {
+        getStyle(id).width = width
+    }
+
+    function setHeight(id, height) {
+        getStyle(id).height = height
+    }
+
+    function getStyle(id) {
+        return getId(id).style
+    }
+
+    function getId(id) {
+        return document.getElementById(id)
+    }
+</script>
+
+<style>
+    #div1 {
+        width: 100px;
+        height: 100px;
+        background: red;
+        border: 1px;
+    }
+</style>
+<body>
+<input type="checkbox" id="desc"
+       onmouseover="bigger('div1','200px')"
+       onmouseout="smaller('div1','100px')"
+/>
+<b/>
+<div id="div1">
+    小测试的信息，不要看，不要看！
+</div>
+</body>
+</html>
