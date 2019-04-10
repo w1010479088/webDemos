@@ -48,7 +48,7 @@
     Dog.prototype = new Animal();
 
     Dog.prototype.change = function (name) {
-        this.name = name;
+        Animal.prototype.change(name).call(this);
         alert(this.name + "Dog")
     };
 
