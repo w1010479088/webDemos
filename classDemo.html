@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<script>
+
+    function Model(id, name) {
+        this.id = id;
+        this.name = name;
+        this.age = 0;
+    }
+
+    Model.prototype.change = function (id, name) {
+        this.id = id;
+        this.name = name;
+    };
+
+    Model.prototype.add = function (id, age) {
+        this.id = id;
+        this.age = age;
+    };
+
+    Model.prototype.age = function (age) {
+        this.age = age;
+    };
+
+    var model = new Model("110", '大俊子');
+    model.change('120', "大俊子二号!" + "dajunzi");
+    alert(model.name);
+
+</script>
+
+<script>
+    function Animal(name) {
+        this.name = name;
+    }
+
+    Animal.prototype.change = function (name) {
+        this.name = name;
+        alert(this.name + "Animal");
+    };
+
+</script>
+
+<script>
+    function Dog(name) {
+        Animal.call(this, name)
+    }
+
+    Dog.prototype = new Animal();
+
+    Dog.prototype.change = function (name) {
+        this.name = name;
+        alert(this.name + "Dog")
+    };
+
+    var animal = new Dog("Dogger");
+    animal.change("ChangeDogger");
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>测试Class</title>
+</head>
+<body>
+
+</body>
+</html>
