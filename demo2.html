@@ -5,12 +5,14 @@
     <title>小测试</title>
 </head>
 <script>
+    var viewId = 'div1'
+
     function bigger(id, size) {
-        setSize(id, size)
+        setSize(viewId, size)
     }
 
     function smaller(id, size) {
-        setSize(id, size)
+        setSize(viewId, size)
     }
 
     function setSize(id, size) {
@@ -39,7 +41,7 @@
     #div1 {
         width: 100px;
         height: 100px;
-        background: red;
+        background: blue;
         border: 1px;
     }
 </style>
