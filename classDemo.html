@@ -55,6 +55,31 @@
     var animal = new Dog("Dogger");
     animal.change("ChangeDogger");
 </script>
+
+<script>
+    function Base(name) {
+        this.name = name;
+    }
+
+    Base.prototype.change = function (name) {
+        this.name = name;
+        alert("Base")
+    };
+
+    function Sub(name) {
+        Base.call(this, name);
+    }
+
+    Sub.prototype = new Base();
+
+    Sub.prototype.change = function (name) {
+        Base.prototype.change.call(this);
+        alert(name);
+    };
+
+    var sub = new Sub("aaa");
+    sub.change("Sub");
+</script>
 <head>
     <meta charset="UTF-8">
     <title>测试Class</title>
