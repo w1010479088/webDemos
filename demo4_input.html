@@ -6,7 +6,57 @@
     </head>
     <body>
         <hr/>
-        <p>账号号：<input type="text" value="请输入账号" title="测试"/></p>
-        <p>密&nbsp;&nbsp;&nbsp;码：<input type="password" value="请输入密码"/></p>
+        <label>
+            账号号：
+            <input type="text" value="请输入账号"/>
+        </label>
+
+        <br/>
+
+        <label for="second">
+            密&nbsp;&nbsp;&nbsp;码：
+            <input id="first" type="password" value="请输入密码" maxlength="6"/>
+            领会标题
+            <input id="second" type="text" value="自行领会">
+        </label><br/>
+
+        性别：
+        <label><input type="radio" name="sex" checked="checked"/> 女 </label>
+        <label><input type="radio" name="sex"/> 男</label>
+
+        <br/>
+        爱好
+        <label><input type="checkbox" name="hobby"/>篮球</label>
+        <label><input type="checkbox" name="hobby" checked="checked"/>足球</label>
+        <label><input type="checkbox" name="hobby"/>乒乓球</label>
+
+        <hr/>
+
+        <input type="button" value="普通按钮"/><br/>
+        <input type="submit" value="提交表单"/><br/>
+        <input type="reset" value="重置表单"/><br/>
+        <input type="image" src="犬夜叉.jpg"/><br/>
+        <input type="file"/>选择文件上传<br/>
+
+        <hr/>
+
+        <textarea title="留言给大俊子">留言板，这里提东西。</textarea>
+
+        <hr/>
+        地址：
+        <select>
+            <option>上海</option>
+            <option selected="selected">安徽</option>
+            <option>北京</option>
+            <option>深圳</option>
+        </select>
+
+        <hr/>
+        <form method="post" action="demo.php">
+            用户名<input type="text" value="请输入用户名" name="account"/><br/>
+            密码<input type="password" value="请输入密码" name="psw"/><br/>
+            <input type="submit"/>
+            <input type="reset"/>
+        </form>
     </body>
 </html>
